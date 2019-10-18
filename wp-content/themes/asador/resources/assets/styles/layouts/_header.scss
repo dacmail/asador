@@ -1,0 +1,209 @@
+.header {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+  padding-top: rem($spacer);
+  padding-bottom: rem($spacer);
+  align-items: flex-start;
+
+  @media (min-width: $lg) {
+    padding-top: rem($gap * 6);
+  }
+
+  .custom-logo-link {
+    display: block;
+    flex: 1;
+    max-width: 64px;
+
+    @media (min-width: $lg) {
+      max-width: 116px;
+    }
+
+    .is-open-menu & {
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+  &__menu-toggle {
+    flex: 0 0 22px;
+    display: block;
+    height: 22px;
+    width: 22px;
+    text-decoration: none;
+    position: relative;
+
+    @media (min-width: $lg) {
+      display: none;
+    }
+
+    .text {
+      display: none;
+    }
+
+    .bar {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: $white;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.25s ease-in-out;
+
+      &:nth-child(2) {
+        top: calc(50% - 1px);
+      }
+
+      &:nth-child(3) {
+        top: calc(100% - 2px);
+      }
+    }
+
+    &.is-active {
+      z-index: 100;
+
+      .bar {
+        &:nth-child(1) {
+          top: 50%;
+          transform: rotate(135deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          top: 50%;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  .nav-primary {
+    background-color: $primary;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: right 0.3s linear 0s;
+
+    @media (min-width: $lg) {
+      position: relative;
+      right: 0;
+      background-color: transparent;
+      height: auto;
+      width: auto;
+      z-index: unset;
+      visibility: visible;
+      opacity: 1;
+      flex: 1;
+      padding: 0;
+      justify-content: flex-end;
+    }
+
+    .nav {
+      list-style: none;
+      margin: 0;
+      padding: rem($gap * 3) rem($spacer * 2);
+
+      @media (min-width: $lg) {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        position: relative;
+        padding: 0;
+      }
+    }
+
+    .menu-item {
+      text-transform: uppercase;
+      font-size: rem(16px);
+      font-weight: 800;
+      line-height: 1.25;
+      letter-spacing: 1.2px;
+      margin: 0 0 rem($spacer * 2) 0;
+
+      @media (min-width: $lg) {
+        margin: 0 0 0 rem($spacer * 2);
+        padding: 0 rem($gap);
+        font-size: rem(12px);
+        font-weight: 600;
+        line-height: 1.17;
+        letter-spacing: 0.9px;
+        position: relative;
+      }
+
+      a {
+        color: $white;
+        transition: $transition-standard;
+      }
+
+      .sub-menu {
+        display: none;
+
+        @media (min-width: $md) {
+          padding: rem($spacer * 2) 0 rem($gap) 0;
+          background-color: $primary;
+          margin: 0;
+          position: absolute;
+          left: 0;
+          top: rem(-$gap);
+        }
+
+        .menu-item {
+          @media (min-width: $md) {
+            margin: 0 0 rem($gap) 0;
+          }
+        }
+      }
+
+      &.menu-item-has-children:hover {
+        @media (min-width: $md) {
+          background-color: $primary;
+        }
+
+        > a {
+          @media (min-width: $md) {
+            position: relative;
+            z-index: 1;
+            color: $black;
+            text-decoration: none;
+          }
+        }
+
+        .sub-menu {
+          @media (min-width: $md) {
+            display: block;
+          }
+
+          a {
+            &:hover {
+              @media (min-width: $md) {
+                color: $white;
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.is-open {
+      z-index: 99;
+      opacity: 1;
+      visibility: visible;
+      right: 0;
+    }
+  }
+}

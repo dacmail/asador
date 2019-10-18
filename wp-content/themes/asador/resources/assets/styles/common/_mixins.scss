@@ -1,0 +1,142 @@
+@function rem($size) {
+  $remSize: $size / 16px;
+
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: rem($size);
+}
+
+@mixin container($width: $container-px, $gap: $gap * 2) {
+  width: 100%;
+  max-width: $width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: rem($gap);
+  padding-right: rem($gap);
+}
+
+@mixin th1 {
+  font-family: $font-primary;
+  font-size: rem(36px);
+  font-weight: 800;
+  line-height: 0.94;
+
+  @media (min-width: $md) {
+    font-size: rem(88px);
+    line-height: 0.93;
+  }
+}
+
+@mixin th2 {
+  font-family: $font-primary;
+  font-size: rem(32px);
+  font-weight: 800;
+  line-height: 1;
+
+  @media (min-width: $md) {
+    font-size: rem(52px);
+  }
+}
+
+@mixin th3 {
+  font-family: $font-primary;
+  font-size: rem(24px);
+  font-weight: 800;
+  line-height: 1.04;
+
+  @media (min-width: $md) {
+    font-size: rem(40px);
+    line-height: 1;
+  }
+}
+
+@mixin th4 {
+  font-family: $font-primary;
+  font-size: rem(20px);
+  font-weight: 800;
+  line-height: 1;
+
+  @media (min-width: $md) {
+    font-size: rem(32px);
+  }
+}
+
+@mixin th5 {
+  font-family: $font-primary;
+  font-size: rem(16px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.8px;
+
+  @media (min-width: $md) {
+    font-size: rem(24px);
+    line-height: 1.13;
+  }
+}
+
+@mixin th6 {
+  font-family: $font-primary;
+  font-size: rem(12px);
+  font-weight: 800;
+  line-height: 1.17;
+  letter-spacing: 0.6px;
+
+  @media (min-width: $md) {
+    font-size: rem(16px);
+    line-height: 1.25;
+    letter-spacing: 0.8px;
+  }
+}
+
+@mixin th7 {
+  font-family: $font-primary;
+  font-size: rem(10px);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.75px;
+
+  @media (min-width: $md) {
+    font-size: rem(12px);
+    line-height: 1.17;
+    letter-spacing: 0.9px;
+  }
+}
+
+@mixin tbody1 {
+  font-family: $font-primary;
+  font-size: rem(16px);
+
+  @media (min-width: $md) {
+    font-size: rem(20px);
+    line-height: 1.4;
+  }
+}
+
+@mixin tbody2 {
+  font-family: $font-primary;
+  font-size: rem(12px);
+
+  @media (min-width: $md) {
+    font-size: rem(16px);
+    line-height: 1.25;
+  }
+}
+
+@mixin button {
+  display: inline-block;
+  background-color: $primary;
+  padding: rem($gap * 1.5);
+  color: $white;
+  font-size: rem(12px);
+  font-weight: 800;
+  line-height: 1;
+
+  @media (min-width: $md) {
+    padding: rem($spacer);
+    font-size: rem(16px);
+    line-height: 1.25;
+  }
+}

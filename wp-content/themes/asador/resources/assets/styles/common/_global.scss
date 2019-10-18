@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  @include tbody1;
+
+  color: $black;
+  background: $black;
+}
+
+a {
+  transition: $transition-standard;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  @include container;
+
+  &--full {
+    max-width: rem($container-full-px);
+  }
+
+  &--small {
+    max-width: rem($container-small-px);
+  }
+}
