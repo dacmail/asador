@@ -19,7 +19,7 @@ body {
   @include tbody1;
 
   color: $black;
-  background: $black;
+  background: $gray;
 }
 
 a {
@@ -41,5 +41,16 @@ a {
 
   &--small {
     max-width: rem($container-small-px);
+  }
+}
+
+.main {
+  @include container($container-full-px);
+
+  padding: 0;
+  background-color: $white;
+
+  @media (min-width: $md) {
+    padding: 0;
   }
 }

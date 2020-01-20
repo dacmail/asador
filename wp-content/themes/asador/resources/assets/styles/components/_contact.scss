@@ -1,0 +1,106 @@
+.contact {
+  background-color: $black;
+  color: $white;
+  padding: rem(27px) rem(22px);
+
+  @media (min-width: $md) {
+    padding: rem(45px) rem(77px);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__iframe {
+    margin-bottom: rem(20px);
+
+    @media (min-width: $md) {
+      flex: 0 0 47%;
+      max-width: 47%;
+    }
+  }
+
+  &__data {
+    max-width: 450px;
+    margin: 0 auto;
+
+    @media (min-width: $md) {
+      flex: 0 0 47%;
+      max-width: 47%;
+      margin: 0;
+    }
+  }
+
+  &__wrapper {
+    border-bottom: 1px solid $primary;
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    padding-bottom: rem(10px);
+  }
+
+  &__title {
+    display: block;
+    width: 100%;
+    margin-bottom: rem(20px);
+  }
+
+  &__info {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  &__schedule {
+    flex: 0 1 auto;
+    max-width: 40%;
+
+    @media (min-width: $sm) {
+      font-size: rem(19px);
+      font-weight: 300;
+      line-height: 1.5;
+    }
+
+    strong {
+      font-weight: 700;
+
+      @media (min-width: $sm) {
+        display: inline-block;
+        font-size: rem(16px);
+        margin-bottom: rem(10px);
+      }
+    }
+  }
+
+  &__address {
+    font-size: rem(12px);
+
+    @media (min-width: $sm) {
+      font-size: rem(23px);
+      font-weight: 300;
+    }
+  }
+
+  &__email {
+    font-family: "Bree Serif", serif;
+    font-size: rem(12px);
+    font-style: normal;
+    word-break: break-all;
+
+    @media (min-width: $sm) {
+      font-size: rem(17px);
+    }
+  }
+
+  &__phone {
+    font-family: "Bree Serif", serif;
+    font-size: rem(14px);
+    color: $primary;
+    font-style: normal;
+
+    @media (min-width: $sm) {
+      font-size: rem(29px);
+    }
+  }
+}
+
+.map {
+  height: 250px;
+}

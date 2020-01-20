@@ -1,0 +1,30 @@
+.icons {
+  text-align: center;
+  padding: rem(30px);
+
+  @media (min-width: $md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: rem(80px) rem(93px) rem(50px) rem(93px);
+  }
+
+  &__icon {
+    margin-bottom: rem(30px);
+  }
+
+  &__title {
+    font-family: "Bree Serif", serif;
+    font-size: rem(15px);
+    line-height: 2.3;
+    color: #3cad82;
+
+    @media (min-width: $md) {
+      font-size: rem(21.5px);
+    }
+  }
+
+  &__image {
+    max-width: 85px;
+  }
+}

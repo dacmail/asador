@@ -1,0 +1,20 @@
+.hero {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+
+  &__video {
+    position: absolute;
+    z-index: 0;
+    width: auto;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    @media (min-width: 900px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

@@ -13,11 +13,14 @@
 // @import "~some-node-module";
 @import "~normalize.css/normalize";
 @import "~owl.carousel/dist/assets/owl.carousel";
+@import "~lightgallery/dist/css/lightgallery";
 
 /** Import theme styles */
 @import "common/global";
-@import "components/slide";
+@import "components/hero";
 @import "components/content";
+@import "components/icons";
+@import "components/contact";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

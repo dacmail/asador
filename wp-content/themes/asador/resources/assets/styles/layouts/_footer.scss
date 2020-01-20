@@ -1,0 +1,13 @@
+.footer {
+  padding: rem(35px);
+  background-color: $black;
+  text-align: center;
+
+  &__image {
+    max-width: 109px;
+
+    @media (min-width: $md) {
+      max-width: 191px;
+    }
+  }
+}

@@ -1,13 +1,8 @@
 .button {
   @include button;
 
-  &--featured {
-    @include th4;
-
-    padding: rem($spacer * 1.5);
-
-    @media (min-width: $md) {
-      @include th5;
-    }
+  &--light {
+    border-color: $primary-alt;
+    color: $black;
   }
 }

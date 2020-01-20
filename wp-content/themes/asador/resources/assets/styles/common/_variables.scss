@@ -1,14 +1,15 @@
 /** Colors */
-$primary: #fe3f3d;
+$primary: #ffde30;
+$primary-alt: #c90;
 $black: #000;
 $white: #fff;
-$gray: #e5e5e5;
+$gray: #6d6d6d;
 
 /** Box Model  */
 $gap: 10px;
 $spacer: $gap * 2;
 $container-px: 1196px;
-$container-full-px: 1600px;
+$container-full-px: 1400px;
 $container-small-px: 788px;
 
 /** Grid settings */
@@ -16,9 +17,6 @@ $lg: 1200px;
 $md: 1024px;
 $sm: 768px;
 $xs: 450px;
-
-/** Fonts */
-$font-primary: "Montserrat", sans-serif;
 
 /** Misc */
 $transition-standard: all 0.3s ease-in-out;
