@@ -43,4 +43,5 @@ bower_components
 node_modules
 npm-debug.log
 wp-content/*.sql
+wp-content/*.sql*
 movefile.yml
