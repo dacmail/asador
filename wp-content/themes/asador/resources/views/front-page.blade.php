@@ -8,7 +8,7 @@
 @endwhile
 
 @if (have_rows('contact')) @php(the_row())
-  <section class="contact">
+  <section class="contact" id="reservas">
     <div class="contact__iframe">
       {!! get_sub_field('iframe') !!}
     </div>
